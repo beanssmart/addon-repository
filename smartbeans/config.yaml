@@ -1,7 +1,7 @@
 name: "SmartBeans"
 description: "Write smart home automations in Java - for Home Assistant"
-image: "tobibo82/addon-smartbeans-{arch}"
-version: "0.0.1"
+image: "beanssmart/addon-smartbeans-{arch}"
+version: "1.0.0-beta-1"
 slug: "smartbeans"
 init: false
 arch:
