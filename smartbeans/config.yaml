@@ -1,12 +1,42 @@
 name: "SmartBeans"
 description: "Write smart home automations in Java - for Home Assistant"
 image: "beanssmart/addon-smartbeans-{arch}"
-version: "1.0.0-beta-1"
+version: "0.0.1"
 slug: "smartbeans"
 init: false
+homeassistant_api: true
+auth_api: true
 arch:
   - aarch64
   - amd64
   - armhf
   - armv7
   - i386
+map:
+  - type: "homeassistant_config"
+    path: "/homeassistant_config"
+  - type: "addon_config"
+    path: "/addon_config"
+    read_only: false
+schema:
+  use_ha_config_dir: "bool"
+  use_addon_data_dir: "bool"
+  entity_prefix: "match([a-z_]*)"
+  log_level: list(error|warn|info|debug)
+  access_token: "password?"
+  ha_port: "int?"
+  mqtt_discovery_topic: "str"
+  mqtt_birth_topic: "str"
+  mqtt_birth_payload: "str"
+  mqtt_lastwill_topic: "str"
+  mqtt_lastwill_payload: "str"
+options:
+  use_ha_config_dir: true
+  use_addon_data_dir: true
+  entity_prefix: "sb_"
+  log_level: "info"
+  mqtt_discovery_topic: "homeassistant"
+  mqtt_birth_topic: "homeassistant/status"
+  mqtt_birth_payload: "online"
+  mqtt_lastwill_topic: "homeassistant/status"
+  mqtt_lastwill_payload: "offline"
