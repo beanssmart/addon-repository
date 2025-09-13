@@ -1,8 +1,10 @@
 name: "SmartBeans"
 description: "Write smart home automations in Java - for Home Assistant"
+url: "https://beanssmart.github.io/smartbeans-doc/"
 image: "beanssmart/addon-smartbeans-{arch}"
 version: "1.0.0-beta-1"
 slug: "smartbeans"
+homeassistant: "2025.09.0"
 init: false
 homeassistant_api: true
 auth_api: true
